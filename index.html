@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    }
+    fieldset{
+        border-radius: 25px;
+        border-color:#DDA0DD;
+        width: fit-content;
+        border-width: 3px;
+    }
+    button{
+        border-radius: 25px;
+        border-color: rgb(165, 72, 111);
+    } 
+    input:required{
+        border: 2px solid rgb(165, 72, 111);
+    }
+   input:optional{
+    border:2px dashed rgb(171, 144, 196);
+   }
+   input[readonly]{
+       font-weight: bold;
+       background-color: #E0C3FC;
+       color: rgb(81, 52, 32);
+   }
+   select{
+    border-radius: 25px;
+    background-color: #0a33d7;
+    width:200px;
+    color: rgb(15, 29, 31);
+    cursor: pointer;
+   }
+   input[type="radio"]:checked{
+    height:15px;
+    width: 15px;
+   }
+   input[type="radio"]:checked+label{
+    font-weight: bold;
+    color: rgb(121, 75, 111);
+   }
+   p{
+    display: none;
+   }
+   input:hover+p{
+    display: inline;
+    color: rgb(88, 22, 116);
+   }
+   input:focus{
+    background-color: #DDA0DD;
+    color: rgb(4, 3, 4);
+   }
+   img{
+    display: none;
+   }
+   input[type="email"]:focus:valid~img.valid{
+    display: inline;
+    height:15px;
+    width:15px;
+   }
+   input[type="email"]:focus:invalid~img.invalid{
+    display: inline;
+    height:15px;
+    width:15px;
+   }
+   h1{
+    color: #06557a;
+   }
+   button{
+    margin-top: 10px;
+   }
+
+   
+</style>
+<center>
+<body>
+    <h1>Course Registration Form</h1>
+<fieldset>
+    <legend>  <button>Personal Details</button></legend>
+<table>
+    <form action="">
+        <td><label for="">First Name  </label></td>
+        <td><input type="text" name="FN" placeholder="Ex:Umme"  required> <p>Enter your Name</p><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Surname</label></td>
+        <td><input type="text" name="SN"  placeholder="EX:Kattubadi" optional > <p>Enter surname</p><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Mobile Number</label></td>
+        <td><input type="tel" name="MN" placeholder="enter 10 digit number"  required> <p>Enter 10 digit number</p><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Email</label></td>
+        <td><input type="email" name="Email"  placeholder="enter email" required>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqF-LHUt5lTMi-HsF7taVMg1Y0CDyslYJLcQ&s"  class="invalid">
+            <img src="https://www.citypng.com/public/uploads/preview/hd-green-mark-tick-symbol-icon-sign-png-701751695051738x2kpqds6js.png" class="valid">
+            <p>Enter email</p><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Password</label></td>
+        <td><input type="password"  name="PW" placeholder="password"  min="8"required> <p>include 1 Uppercase, 1 lowercase,1 special char</p><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Confirm Password</label></td>
+        <td><input type="password"  name="CPW" placeholder="confirm password"  required><p>retype the password</p><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">DOB</label></td>
+        <td><input type="date"  name="dob" placeholder="20/12/2024"  required><br/> <p>Enter DOB</p></td>
+    </tr>
+    <tr>
+        <td><label for="">Gender</label></td>
+        <td><input type="radio" name="Gender"  value="M">  <label >Male </label>
+        <input type="radio"   name="Gender"  value="F">    <label >Female</label>
+         <input type="radio"   name="Gender"  value="NS">    <Label>not specified </Label> <br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Select Country  </label></td>
+       <td><select name="Country">
+        <option value="I"> INDIA </option>
+        <option value="U">UAE</option>
+        <option value="uk">UK  </option><br/></td>
+    </tr>
+    <tr>
+        <td><label for="">Upload Picture</label></td>
+        <td><input type="file" name="Pic" ><br/> <p>Upload your picture</p></td>
+    </tr>
+    <tr>
+        <td><input type="reset" name="RS"  required /><br/></td>
+        
+    </tr>
+</table>
+</fieldset>
+<br>
+<fieldset>
+    
+    <legend> <button>Course Details </button></legend>
+    <form action="">
+       <label for="">Select Cources </label> <br>
+           <select name="Course" required>
+                <option value="PFS">Python full stack</option>
+                <option value="JFS">java full stack  </option>
+            </select><br/>
+       <label for="">Delivery Mode</label>
+        <input type="radio" name="mode" /><label   >ONLINE</label>
+        <input type="radio" name="mode"/><label  >OFFLINE</label><br>
+       <label for="">Institute</label>
+       <input type="text" name="inst"  placeholder="TAP ACADEMY"  required  readonly><br>
+       <label for="">Comments</label><br/>
+       <textarea name="text" id="" cols="20" rows="5" ></textarea><br> 
+        
+</fieldset>
+<a href="./card.html" target="_blank" style="text-decoration: none;">
+    <button type="button">Submit</button>
+  </a>
+  
+  
+</form>
+</body>
+</center>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
